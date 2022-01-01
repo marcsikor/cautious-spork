@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!--Skrypt wczytujący dane z mockaroo.com ( działa po wcisnieciu przycisku ) !-->
+            
+        <script src="app2.js"></script>  
+        
+        <!-- Chart.js -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js">
+
+        </script>
+    </head>
+    <body>
+
+        <div id="header">
+            <h1>Group presentation</h1>
+        </div>
+
+
+        <div id="button">
+            <button onclick="loader()"> Wyświetl dane</button>
+            <br>
+            <button onclick="reset()"> Wyczyść</button>
+        </div>
+
+        <!-- Do tego diva ładuje się tabela z mocaroo-->
+        <div id="content">
+            
+        </div>
+
+        <!-- Wykresy -->
+        <div style= "height:400px; width:900px;"> 
+            <!-- style do zmiany rozmiaru -->
+            <canvas id="myChart"></canvas>
+        </div>
+        <br>
+        <!-- br żeby zrobić odstęp - trzeba ogarnąć przy stylizacji bo wygląda jak kupa xd -->
+        <br>
+        <div style=" height:400px; width:400px;">
+            <canvas id="myChart2"></canvas> 
+        </div>
+
+    </body>
+</html>

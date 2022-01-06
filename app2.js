@@ -123,7 +123,7 @@ function dataprep(countries)
   {
     while (i2 < (counters.length - 1)) // teraz działa (magicznie)
     {
-      if (counters[i2] < counters[i2+1]) // chuj jej w dupe - niech ktoś to kurwa za mnie naprawi :c
+      if (counters[i2] < counters[i2+1]) // chuj jej w dupe - niech ktoś to kurwa za mnie naprawi :c
       {
         temp1 = counters[i2];
         counters[i2] = counters[i2+1];
@@ -172,31 +172,55 @@ function charts(unique, counters) // przeklejone tak mocno, że to od samego pat
             label: '# of countries in the data (6 most frequent)',
             data: counters,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255,248,220, 0.7)',
+                'rgba(245,222,179, 0.7)',
+                'rgba(210,180,140, 0.7)',
+                'rgba(188,143,143, 0.7)',
+                'rgba(210,105,30, 0.7)',
+                'rgba(160,82,45, 0.7)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255,248,220, 1)',
+                'rgba(245,222,179, 1)',
+                'rgba(210,180,140, 1)',
+                'rgba(188,143,143, 1)',
+                'rgba(210,105,30, 1)',
+                'rgba(160,82,45, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2,
+            color: '#ffffff'
         }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
+
+    scales: {
+        x: {
+          grid: {
+            color: 'white',
+            borderColor: 'white',
+          },
+
+          ticks: {
+            color: 'white',
+            },
+
+        },
+
+
+        y: {
+          grid: {
+            color: 'white',
+            borderColor: 'white'
+          },
+
+          ticks: {
+            color: 'white',
+            },
+
         }
+      }
     }
+   
 });
 }
 
@@ -213,30 +237,26 @@ function charts2(unique, counters)
             label: '# of countries in the data',
             data: counters,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255,248,220, 0.7)',
+                'rgba(245,222,179, 0.7)',
+                'rgba(210,180,140, 0.7)',
+                'rgba(188,143,143, 0.7)',
+                'rgba(210,105,30, 0.7)',
+                'rgba(160,82,45, 0.7)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255,248,220, 1)',
+                'rgba(245,222,179, 1)',
+                'rgba(210,180,140, 1)',
+                'rgba(188,143,143, 1)',
+                'rgba(210,105,30, 1)',
+                'rgba(160,82,45, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+        color: '#fff',
     }
 });
 }

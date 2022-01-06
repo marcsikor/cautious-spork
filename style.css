@@ -1,11 +1,23 @@
-*
-{
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+*{
     margin: 20;
     padding: 20;
 }
+td{
+    color: white;
+}
+table{
+    text-align: center;
+    margin: auto;
+}
+h1{
+    color: #EFBDEB;
+    text-align: center;
+}
 body
 {
-    background-image: linear-gradient(lightcyan, white);
+    background-color: #6461A0;
+    font-family: 'Nunito', sans-serif;
 }
 header
 {
@@ -19,28 +31,100 @@ header
 content
 {
     display: flex;
-    width: 700px;
-    justify-content: left;
-    margin-right:auto;
-    margin-left:auto;
-}
-button 
-{
-    display: flex;
-    width: 200px;
-    height: 30px;
+    width: 100%;
     justify-content: center;
     margin-right:auto;
     margin-left:auto;
+}
+#button{
     text-align: center;
-    background-image: linear-gradient(blue, purple); /* zrobione na pokaz, prosze to zmienić bo chujowe te kolory xd */
+}
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "Zilustruj dane";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+  span a1{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a1:before,
+  span a1:after{
+    position: absolute;
+    content: "Wyświetl dane";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a1:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a1:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a1:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     color: white;
-    border: 2px solid black;
-}
-button:hover /* tutaj analogicznie xd */
-{
-    opacity: 50;
-    border-color: #2196F3;
-    background-image: linear-gradient(orange, white);
-    color: black
-}
+    background-color: #6461A0;
+    text-align: center;
+    height: 4%;
+  }
+  
